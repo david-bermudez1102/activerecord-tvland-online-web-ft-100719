@@ -19,14 +19,14 @@ describe Character do
     niles = Character.new(name: "Niles Crane")
     niles.show = frasier
     niles.save
-    
+
     frasier.reload
     expect(frasier.characters).to include(niles)
     expect(niles.show).to eq(frasier)
   end
 
   it "has a catchphrase" do
-    
+
     urkel = Character.new(name: "Steve Urkel")
     urkel.catchphrase = "Did I do that?"
     urkel.save
